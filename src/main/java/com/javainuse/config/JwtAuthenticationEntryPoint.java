@@ -24,6 +24,7 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
 			AuthenticationException authException) throws IOException {
 
 		response.setStatus(401);
+		response.setContentType("application/json");
 		response.getWriter().write("\"status\" : \"401 \"\n" +
 				"\"message\" : \"Malformed token \"");
 
